@@ -12,7 +12,7 @@ public class CustomPolicy extends Policy {
     @Override
     public PermissionCollection getPermissions(ProtectionDomain domain) {
         PermissionCollection permissions = new Permissions();
-        // so that custom classloader can load log4j classes
+        // so that custom classloader can be created and then it can load log4j classes
         permissions.add(new AllPermission());
         return permissions;
     }
